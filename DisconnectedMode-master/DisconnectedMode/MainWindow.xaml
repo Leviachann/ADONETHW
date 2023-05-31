@@ -1,0 +1,22 @@
+﻿<Window x:Class="DisconnectedMode.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Author Management" Height="350" Width="560">
+    <Grid HorizontalAlignment="Left" Width="550" Margin="10,0,0,0">
+        <StackPanel Margin="0,20,10,0" HorizontalAlignment="Right" Width="540" Height="314" VerticalAlignment="Top">
+            <TextBlock Text="Author Name:"/>
+            <TextBox x:Name="txtAuthorName" Margin="0 5"/>
+            <Button Content="Insert" Click="InsertButton_Click" Margin="0 5"/>
+            <Button Content="Show All" Click="ShowAllButton_Click" Margin="0 5"/>
+            <ListBox x:Name="lstAuthors">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding AuthorName}" />
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+
+            <Button Content="Delete" Click="DeleteButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
